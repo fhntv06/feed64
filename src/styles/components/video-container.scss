@@ -1,0 +1,29 @@
+@use '../variable' as *;
+
+.video__container {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video__mask {
+  z-index: 2;
+  height: 100%;
+
+  @media (max-width: 769px) {
+    background: linear-gradient(180deg, $color-black 35%, transparent 50%);
+  }
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+}
